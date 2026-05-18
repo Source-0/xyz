@@ -1,0 +1,20 @@
+[project]
+name = "deep-research"
+version = "0.1.0"
+description = "Parallel multi-agent deep research with Claude"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic[aiohttp]>=0.92.0",
+    "pydantic>=2.0",
+]
+
+[project.scripts]
+deep-research = "deep_research.__main__:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["deep_research*"]
